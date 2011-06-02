@@ -1,0 +1,49 @@
+
+R version 2.12.2 (2011-02-25)
+Copyright (C) 2011 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-apple-darwin9.8.0/x86_64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(metfiles)
+> path <- system.file("extdata", "SCRAM", "surface", "S9319391.DAT", package="metfiles")
+> met.data <- read.SCRAM.surface(path)
+> summary(met.data)
+   station               year        month             day       
+ Length:8760        Min.   :91   Min.   : 1.000   Min.   : 1.00  
+ Class :character   1st Qu.:91   1st Qu.: 4.000   1st Qu.: 8.00  
+ Mode  :character   Median :91   Median : 7.000   Median :16.00  
+                    Mean   :91   Mean   : 6.526   Mean   :15.72  
+                    3rd Qu.:91   3rd Qu.:10.000   3rd Qu.:23.00  
+                    Max.   :91   Max.   :12.000   Max.   :31.00  
+                                                                 
+      hour       ceiling.height   wind.directon     wind.speed    
+ Min.   : 0.00   Min.   :   0.0   Min.   : 0.00   Min.   : 0.000  
+ 1st Qu.: 5.75   1st Qu.:  23.0   1st Qu.: 8.00   1st Qu.: 3.000  
+ Median :11.50   Median :  65.0   Median :26.00   Median : 5.000  
+ Mean   :11.50   Mean   :  86.5   Mean   :19.63   Mean   : 5.819  
+ 3rd Qu.:17.25   3rd Qu.: 120.0   3rd Qu.:31.00   3rd Qu.: 8.000  
+ Max.   :23.00   Max.   : 250.0   Max.   :36.00   Max.   :26.000  
+                 NA's   :6899.0                                   
+ dry.bulb.temperature total.cloud.cover opaque.cloud.cover
+ Min.   : 27.00       Min.   : 0.000    Min.   : 0.000    
+ 1st Qu.: 50.00       1st Qu.: 0.000    1st Qu.: 0.000    
+ Median : 62.00       Median : 0.000    Median : 0.000    
+ Mean   : 63.95       Mean   : 3.108    Mean   : 2.364    
+ 3rd Qu.: 76.00       3rd Qu.: 7.000    3rd Qu.: 3.000    
+ Max.   :112.00       Max.   :10.000    Max.   :10.000    
+                                                          
+> 
