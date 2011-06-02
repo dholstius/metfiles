@@ -8,5 +8,5 @@ Author: David Holstius
 Maintainer: David Holstius <david.holstius@berkeley.edu>
 License: BSD
 LazyLoad: yes
-Collate: 'clean.numeric.R' 'metfiles-internal.R' 'metfiles-package.R' 'read.SCRAM.surface.R'
-    'read.SCRAM.upper.R'
+Collate: 'metfiles-internal.R' 'metfiles.R' 'read.SAMSON.R' 'read.SCRAM.surface.R'
+    'read.SCRAM.upper.R' 'read.TD6201.R' 'replace.all.R'

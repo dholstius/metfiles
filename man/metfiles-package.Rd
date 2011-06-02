@@ -8,6 +8,7 @@ Version: \tab 0.1\cr
 Date: \tab 2011-06-02\cr
 License: \tab BSD\cr
 LazyLoad: \tab yes\cr
+}
 
 Supported formats include SCRAM surface (aka MET144), SCRAM upper air, and SAMSON hourly.}
 \alias{metfiles}

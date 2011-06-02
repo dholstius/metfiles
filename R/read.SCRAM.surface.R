@@ -19,9 +19,15 @@ read.SCRAM.surface <- function(file, ...) {
 		wind.speed = 'numeric',				# Knots
 		dry.bulb.temperature = 'numeric',	# Degrees Fahrenheit
 		total.cloud.cover = 'numeric',		# Tens of percent
-		opaque.cloud.cover = 'numeric')		# Tens of percent
+		opaque.cloud.cover = 'character')	# Tens of percent ("-" is 100%)
 	widths <- c(5, 2, 2, 2, 2, 3, 2, 3, 3, 2, 2)
-	raw.contents <- read.fwf(file, widths, colClasses=cols, col.names=names(cols))
-	clean.contents <- transform(contents, ceiling.height=clean.numeric(ceiling.height))
+	raw.contents <- read.fwf(file, 
+		widths, 
+		colClasses = cols, 
+		col.names = names(cols))
+	clean.contents <- transform(raw.contents, 
+		ceiling.height = as.numeric(replace.all(ceiling.height, list('---'), NA)),
+		total.cloud.cover = as.numeric(replace.all(total.cloud.cover, list('-'), 10)),
+		opaque.cloud.cover = as.numeric(replace.all(opaque.cloud.cover, list('-'), 10)))
 	return(clean.contents)
 }

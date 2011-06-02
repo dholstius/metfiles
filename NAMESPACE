@@ -1,2 +1,4 @@
+export(read.SAMSON)
 export(read.SCRAM.surface)
 export(read.SCRAM.upper)
+export(read.TD6201)

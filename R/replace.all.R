@@ -1,8 +1,9 @@
-#' Replace user-specified "missing data" codes with NA and convert to numeric.
+#' \code{replace.all} is a wrapper around \code{replace}.
 #'
-#' @param x the array to clean
-#' @param missing a list of codes considered equivalent to NA
-#' @return a numeric array
-clean.numeric <- function(x, missing=list('---')) {
-	as.numeric(replace(x, which(x %in% missing), NA))
+#' @param x vector
+#' @param what list of values to replace (usually one or more character strings)
+#' @param value replacement value 
+#' @return a vector with the values replaced.
+replace.all <- function(x, what, value) {
+	replace(x, which(x %in% what), value)
 }
